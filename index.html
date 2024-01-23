@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ 
+<head>
+  <meta charset="utf-8">
+  <title>Simple Calculator using HTML, CSS and JavaScript</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+ 
+<body>
+<div class="container">
+  <div class="display">
+    <div class="enteredInput">
+      <input type="text" id="display"/>
+    </div>
+
+    <div class="output">
+      <input type="text" id="displayOutput"/>
+    </div>
+  </div>
+  
+  <div class="input">
+
+    <div class="numpadButton">
+      <button onclick="getNumber(7)">7</button>
+    </div>
+    <div class="numpadButton">
+      <button onclick="getNumber(8)">8</button>
+    </div>
+    <div class="numpadButton">
+      <button onclick="getNumber(9)">9</button>
+    </div>
+    <div class="numpadButton">
+      <button onclick="getOperator('*')">*</button>
+    </div>
+    <div class="numpadButton">
+      <button onclick="getOperator('^')">^</button>
+    </div>
+    <div class="numpadButton">
+      <button onclick="getOperator('&#40;')">&#40;</button>
+    </div>
+
+    <div class="numpadButton">
+      <button onclick="getNumber(4)">4</button>
+    </div>
+    <div class="numpadButton">
+      <button onclick="getNumber(5)">5</button>
+    </div>
+    <div class="numpadButton">
+      <button onclick="getNumber(6)">6</button>
+    </div>
+    <div class="numpadButton">
+      <button onclick="getOperator('-')">-</button>
+    </div>
+    <div class="numpadButton">
+      <button onclick="getOperatorTrig('Sin')">Sin</button>
+    </div>
+    <div class="numpadButton">
+      <button onclick="getOperator('&#41;')">&#41;</button>
+    </div>
+
+    <div class="numpadButton">
+      <button onclick="getNumber(1)">1</button>
+    </div>
+    <div class="numpadButton">
+      <button onclick="getNumber(2)">2</button>
+    </div>
+    <div class="numpadButton">
+      <button onclick="getNumber(3)">3</button>
+    </div>
+    <div class="numpadButton">
+      <button onclick="getOperator('+')">+</button>
+    </div>
+    <div class="numpadButton">
+      <button onclick="getOperatorTrig('Cos')">Cos</button>
+    </div>
+    <div class="numpadButton">
+      <button onclick="getOperator('.')">.</button>
+    </div>
+
+    <div class="numpadButton">
+      <button onclick="clearScreen()">C</button>
+    </div>
+    <div class="numpadButton">
+      <button onclick="getNumber(0)">0</button>
+    </div>
+    <div class="numpadButton">
+      <button onclick="calculateExpression()">=</button>
+    </div>
+    <div class="numpadButton">
+      <button onclick="getNumber('/')">/</button>
+    </div>
+    <div class="numpadButton">
+      <button onclick="getOperatorTrig('Tan')">Tan</button>
+    </div>
+    <div class="numpadButton">
+      <button onclick="getNumber(0)">||</button>
+    </div>
+   
+    
+
+  </div>
+
+  </div>
+
+</div>
+
+
+ 
+ 
+      <script src="script.js"></script>
+</body>
+ 
+</html>

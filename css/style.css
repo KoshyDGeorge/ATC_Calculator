@@ -1,0 +1,68 @@
+
+
+.container{
+  display: grid;
+  grid-template-columns: repeat(6 , 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  height: 100vh;
+  grid-gap: 1rem;
+  font-size: 90%;
+  
+}
+input{
+  font-size: 2.5rem;
+}
+
+.display{
+  grid-column: span 6;
+  grid-row: span 4;
+  display: grid;
+  background-color: aqua;
+}
+
+.enteredInput{
+  grid-column: span 6;
+  grid-row: span 2;
+  display: grid;
+  background-color: blue;
+}
+
+.output{
+  display: grid;
+  grid-column: span 6;
+  grid-row: span 2;
+  background-color: red;
+}
+
+.input{
+  grid-row: span 4;
+  grid-column: span 6;
+  display: grid;
+  grid-template-columns: repeat(6 , 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  background-color: blueviolet;
+ 
+}
+
+.numpadButton{
+  display: grid;
+  grid-column: span 1;
+  grid-row: span 1;
+  background-color: pink;
+
+}
+
+
+
+
+
+
+
+
+
+
+button{
+    font-size: 2rem;
+    color: white;
+    background-color: black;
+  }
