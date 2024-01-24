@@ -1,13 +1,11 @@
-let firstNumber;
-let secondNumber;
+
 let trigNumber;
 let CurrentExpresstion;
 
-let step = 0;
+
 let operation;
 let result = 0;
-let firstNumArray =[];
-let secondNumArray =[];
+
 let trigNumArray =[];
 let CurrentExpresstionArray =[];
 
@@ -15,27 +13,14 @@ const display = document.getElementById('display')
 const output = document.getElementById('displayOutput')
 
 function getNumber(Num){
-    console.log(Num);
+    
+    
+    if(CurrentExpresstionArray[CurrentExpresstionArray.length - 2] === ')' ){
+        getOperator('*');
+    }
     CurrentExpresstionArray.push(Num);
     CurrentExpresstion = CurrentExpresstionArray.join('');
     display.value=CurrentExpresstion;
-
-    // if( step === 0 || step ===1){
-    //     firstNumArray.push(Num);
-    //     step =1;
-    //     firstNumber = Number(firstNumArray.join(''));
-    //     display.value=firstNumber;
-    // } 
-    // else if(step===2){
-    //     secondNumArray.push(Num);
-    //     secondNumber = Number(secondNumArray.join(''));
-    //     display.value = secondNumber;
-    // }
-    // else if(step===3){
-    //     trigNumArray.push(Num);
-    //     secondNumber = Number(secondNumArray.join(''));
-    //     display.value = secondNumber;
-    // }
 }
 
 function getOperator(operator){
@@ -56,11 +41,6 @@ function getOperator(operator){
 function clearScreen(){
     display.value = 0;
     output.value =0;
-    firstNumArray = [];
-    secondNumArray=[];
-    firstNumber=null;
-    secondNumber=null;
-    step=0;
     operation=null;
     result=0;
     CurrentExpresstion = null
@@ -75,6 +55,11 @@ function getOperatorTrig(TrigFunction){
     display.value=CurrentExpresstion;
 }
 
+function backspace(){
+    CurrentExpresstionArray.pop();
+    CurrentExpresstion = CurrentExpresstionArray.join('');
+    display.value = CurrentExpresstion;
+}
 
 
 function calculateExpression(){
