@@ -12,6 +12,10 @@ function getNumber(Num){
 }
 
 function getOperator(operator){
+    if((operator === '-' || operator === '+') && (CurrentExpresstionArray[CurrentExpresstionArray.length -1]=='e')){
+        getNumber(operator);
+        return;
+    }
     CurrentExpresstionArray.push(' ');
     CurrentExpresstionArray.push(operator);
     CurrentExpresstionArray.push(' ');
@@ -61,7 +65,7 @@ function resolveTrigFunction(expression,trigFunction){
     while(Regex.test(expression)){
         const match = expression.match(Regex);
         const [fullMatch, num1] = match;
-        const result = mathTrigFunction((parseFloat(num1) * Math.PI) / 180).toFixed(7);
+        const result = mathTrigFunction((parseFloat(num1) * Math.PI) / 180);
         expression = expression.replace(fullMatch, result);
     }
     return expression;
